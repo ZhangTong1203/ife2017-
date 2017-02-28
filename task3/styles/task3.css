@@ -1,0 +1,40 @@
+* { 
+	margin : 0px;
+	padding : 0px;
+}
+div, section, article {
+	border : 1px gray solid;
+	margin : 20px;
+	padding : 20px;
+	background-color : white;
+}
+div {
+	background-color : #eee;
+	padding : 0;
+}
+img {
+	width : 80px;
+	height : 80px;
+}
+p {
+	text-indent : 2em;
+}
+#team {
+	width : 160px;
+	float : left;
+}
+#person {
+	width : 80px;
+	float : right;
+	top : 0;
+}
+#clear {
+	clear : both;
+	width : 0;
+	height : 0;
+	margin : 0px;
+}
+article {
+	margin-left : 240px;
+	margin-right : 160px;
+}
