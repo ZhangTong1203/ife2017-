@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*表格部分*/ 
+
+th {
+	background: #000;
+	color: #fff;
+	text-align: left;
+}
+tr {font-weight: bold;}
+
+tr:nth-child(2n+2) {
+	background: #CDCEC9;
+}
+tr:nth-child(-n+3){
+	color: red;
+}
+
+/*输入框部分*/
+
+input {
+	width: 200px;
+
+	margin-top: 20px;
+	transition: border,width 2s;
+    -moz-transition: border,width 2s; /* Firefox 4 */
+	-webkit-transition: border,width 2s; /* Safari and Chrome */
+	-o-transition: border,width 2s; /* Opera */	
+}
+input:focus {
+	width: 400px;
+	border: 1px blue solid;
+} 
+
+
+/*动画部分*/
+
+.animation {
+	width: 300px;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid black;
+	margin-top: 30px;
+	position: relative;
+}
+.button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.button a {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #ccc;
+	text-align: center;
+	text-decoration: none;
+	color:  #fff;
+	opacity: .5;
+}
+.imgs {
+	width: 300%;
+	height: 150px;
+	position: relative;
+	left: 0;
+	transition: left .5s;
+}
+.imgs li {
+	display: inline-block;
+	width: 300px;
+	height: 150px;
+}
+.imgs li:nth-child(1) {
+	background: #f00;
+}
+.imgs li:nth-child(2) {
+	background: #0f0;
+}
+.imgs li:nth-child(3) {
+	background: #00f;
+}
+
+
+#img_01:target~.imgs {
+	left: 0;
+}
+#img_02:target~.imgs {
+	left: -100%;
+}
+#img_03:target~.imgs {
+	left: -200%;
+}
