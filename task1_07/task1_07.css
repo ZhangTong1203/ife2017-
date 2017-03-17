@@ -1,0 +1,693 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.container{
+	width: 100%;
+	min-width: 1280px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/*header section*/
+header {
+	position: relative;
+	width: 100%;
+	height: 55px;
+}
+header .logo {
+	position: absolute;
+	left: 4.7%;
+
+	width: 7.8%;
+	font: 21px/55px "SimHei";
+	text-align: right;
+	background: url("imgs/logo.png") left no-repeat;
+}
+header ul {
+	position: absolute;
+	top: 15px;
+	right: 11.33%;
+
+	width: 35.55%;
+}
+header ul li {
+	width: 20%;
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+header a {
+	color: #A7A7A9;
+	text-decoration: none;
+}
+header a:hover{
+	color: rgb(231,79,77);
+	box-sizing: border-box;
+	padding: 15%;
+	padding-bottom: 20px;
+	border-bottom: 4px solid #E74E48;
+}
+header .login {
+	position: absolute;
+	top: 15px;
+	right: 5%;
+	
+	width: 4%;
+	font: 14px "Microsoft YaHei";
+	text-align: right;
+	text-decoration: none;
+  	color: rgb(231, 79, 77);
+  	box-sizing: border-box;
+  	padding-bottom: 20px;
+  	cursor: pointer;
+  	transition: border-bottom .5s;
+  	background: url("imgs/login.png") left top  no-repeat;
+}
+header .login:hover {
+	border-bottom: 3px solid #E74E48;
+}
+
+
+/*section one*/
+.section1 {
+	position: relative;
+	width: 100%;
+	height: 720px;
+	background: url("imgs/p1.png");
+	background-size: cover;
+}
+.section1 div {
+	position: absolute;
+	top: 230px;
+	left: 9.14%;
+}
+.section1 p.descp{
+ 	font: 21px/1.762em "Microsoft YaHei";
+  	color: rgb(255, 253, 253);
+}
+.section1 p.section1-title{
+	font: 60px/1.45em "Microsoft YaHei";
+	color: rgb(255, 253, 253);
+}
+.section1 input {
+	position: absolute;
+	top:430px;
+	left: 9.14%;
+
+	font: 30px/1.9em "Microsoft YaHei";
+	color: #fff;
+	background-color: rgb(231, 79, 77);
+	border: 0;
+	width: 25.78%;
+	height: 65px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+/*section two*/
+.section2 {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.section2-1, .section2-2, .section2-3, .section2-4 {
+	flex: 1;
+	margin-bottom: 65px;
+}  
+.section2 img {
+	margin : 45px 45.3%;
+}
+.section2-text {
+	border-right: 2px #bbbbbc solid;
+	font: 14px/1.286em "SimHei";
+	color: rgb(118, 119, 119);
+	padding: 0 23.43% 20px 23.43%; 
+	text-align: center;
+}
+.no-border{
+	border:0;
+}
+
+/*section three*/
+.section3 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #EDECEC;
+	padding-top: 90px;
+	padding-bottom: 80px;
+}
+.section3 div {
+	flex: 1;
+}
+.section3-text {
+	font:53.586px/1.056em "SimHei";
+	color: rgba(50, 51, 51, 0.502);
+	margin-top: 52px;
+}
+
+
+/*section four*/
+.section4 {
+	position: relative;
+	width: 100%;
+	height: 341px;
+	background: url("imgs/section4.png");
+	background-size: cover;
+}
+.section4 p:first-child {
+	position: relative;
+	top: 50px;
+	text-align: center;
+  	font: 21px/1.994em "Microsoft YaHei";
+  	color: rgb(255, 255, 255);
+}
+.white {
+	position: relative; 
+	top: 60px;
+	margin: 0 auto;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	border: 0;
+}
+.section4 p:nth-child(3){
+	position: relative;
+	top: 80px;
+	font-size: 12px/2.065em "Microsoft YaHei";
+    color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	margin-bottom: 50px;  
+}
+
+.option {
+	position: relative;
+	top: 50px;
+	width: 235px;
+	height: 35px;
+	display: inline-block;
+	background-color: #fff;
+
+	font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+	color: #B3B3B3;
+}
+.option span {
+	margin-left: 10px;
+}
+.select4-1 {
+	position: absolute;
+	right: 5px;
+	top: 8px;
+	width: 20px;
+	cursor: pointer;
+}
+.option:first-child{
+	margin-left: 125px;
+}
+.option+.option {
+	margin-left: 30px;
+}
+.select {
+	border: 2px solid #BE4F48;
+	border-top: 0;
+	display: none;
+	box-sizing: border-box;
+	width: 235px;
+}
+.select li {
+	background-color: #ddd;
+	cursor: pointer;
+	padding-left: 10px;
+	list-style: none;
+}
+.select li:hover{
+	background: #BE4F48;
+	color: #fff;
+}
+.select li:hover::before {
+	content: "\2714";
+}
+
+#select4-1:target {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	display: block;
+}
+#select4-2:target {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	display: block;
+}
+#select4-3:target {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	display: block;
+}
+.section4 input[type="submit"] {
+	width: 235px;
+	height: 35px;
+	background-color: #BE4E48;
+  	font: 14px/35px "Microsoft YaHei";
+	color: rgb(255,255,255);
+	cursor: pointer;
+	letter-spacing: 40px;
+	padding-left: 30px;
+	border: 0;
+} 
+
+
+/*section five*/
+.section5 {
+	width: 100%;
+	height: 605px;
+	background-color: #F8F8F8;
+	box-sizing: border-box;
+	padding: 100px 10.9% 115px 10.9%;
+}
+.section5 div {
+	height: 390px;
+	width: 220px;
+	display: inline-block;
+}
+.section5 div+div {
+	margin-left: 35px;
+}
+.section5 .section5-city {
+	font: 15px/2em "Microsoft YaHei";
+	text-align: center;
+}
+.section5 .section5-desc {
+	font: 13px/2em "Microsoft YaHei";
+	color: #aaa;
+	text-align: center;
+}
+
+/*section six*/
+.section6 {
+	width: 100%;
+	height: 565px;
+}
+.section6-1 {
+	width: 66.4%;
+	height: 100%;
+	text-align: center;
+	display: inline-block;
+	background: url("imgs/section6.png");
+	background-size: cover;
+	vertical-align: top;
+}
+.section6-1 p:nth-child(1) {
+	position: relative;
+	top: 135px;
+ 	font: 49.473px/1.528em "Microsoft YaHei";
+ 	color: #fff;
+ }
+.section6-1 p:nth-child(2) {
+	position: relative;
+	top: 70px;
+ 	font: 157.788px/1.528em "Microsoft YaHei";
+ 	color: #fff;
+}
+.section6-1 p:nth-child(3),p:nth-child(4){
+
+	position: relative;
+	top: 10px;
+	font: 22px/1.969em "Microsoft YaHei";
+  	color: #fff;
+}
+.section6-2 {
+	position: relative;
+	display: inline-block;
+	width: 33.6%;
+	height: 100%;
+}
+.select6 {
+	position: relative;
+	width: 100%;
+}
+.section6-2 input {
+	position: relative;
+	top: 426px;
+	left: 166px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #bbb;
+	border-radius: 12px;
+	outline: none;
+	cursor: pointer;
+	float: left;
+}
+.section6-2 input:checked {
+	background: #aaa;
+}
+.section6-container-1, .section6-container-2, .section6-container-3 {
+	position: absolute;
+	top: 155px;
+	left: 80px;
+	width: 290px;
+	height: 300px;
+	font: 12px/2.5em "Simsun";
+	color: rgb(170,170,170);
+	display: none;
+}
+.section6-container-1 p:first-child, .section6-container-2 p:first-child, .section6-container-3 p:first-child {
+	font: bold 20px/2.5em "Microsoft YaHei";
+	color: #000;
+}
+.select6 span {
+	color: #E74F4D;
+}
+.select6 input{
+	margin-left: 20px;
+}
+input[id*="option"]:checked ~ [class*="section6-container"] {
+	display: block;
+}
+.section6-2 input[type="button"] {
+	position: absolute;
+	left: 170px;
+	top: 360px;
+	width: 100px;
+	height: 30px;
+	color: #E74F4D;
+	background-color: #fff;
+	border: 1px solid #E74F4D;
+	font: 15px/1.143em "Microsoft YaHei";
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color  color border .2s .7s ease-in-out;
+}
+.section6-2 input[type="button"]:hover{
+	background-color: #E74F4D;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+
+/*section seven*/
+
+
+.section7 {
+	width: 100%;
+	height: 525px;
+}
+.section7-1 {
+	width: 33.2%;
+	height: 100%;
+	background-color: #E74F4D;
+	display: inline-block;
+}
+.section7-1 p {
+	position: relative;
+	top: 170px;
+	font: 21px/1.466em "Microsoft YaHei";
+	color: #fff;
+ 	text-align: center;
+}
+.section7-1 div{
+	position: relative; 
+	top: 205px;
+	margin: 0 auto;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	border: 0;
+}
+.section7-1 input {
+	position: relative;
+	left: 50%;
+	margin-left: -82.5px;
+	top: 250px;
+	width: 165px;
+	height: 40px;
+	color: #fff;
+	background-color: #E74F4D;
+	border: 1px solid #fff;
+	font: 21px/1.143em "Microsoft YaHei";
+	cursor: pointer;
+	transition: background-color  color border .3s ease-in-out;
+}
+.section7-1 input:hover {
+	background-color: #fff;
+	color: #E74F4D;
+	border: 1px solid #E74F4D;
+}
+
+.section7-2 {
+	width: 33.2%;
+	height: 100%;
+	background-color: #fff;
+	display: inline-block;
+}
+.section7-2 p {
+	position: relative;
+	top: 170px;
+	font: 21px/1.466em "Microsoft YaHei";
+	color: #000;
+ 	text-align: center;
+}
+.section7-2 div{
+	position: relative; 
+	top: 205px;
+	margin: 0 auto;
+	width: 30px;
+	height: 2px;
+	background-color: #aaa;
+	border: 0;
+}
+.section7-2 input {
+	position: relative;
+	left: 50%;
+	margin-left: -82.5px;
+	top: 250px;
+	width: 165px;
+	height: 40px;
+	color: #E74F4D;
+	background-color: #fff;
+	border: 1px solid #E74F4D;
+	font: 21px/1.143em "Microsoft YaHei";
+	cursor: pointer;
+	transition: background-color  color border .2s .7s ease-in-out;
+}
+.section7-2 input:hover {
+	background-color: #E74F4D;
+	color: #fff;
+	border: 1px solid #fff;
+}
+.section7-3 {
+	height: 525px;
+	width: 33.6%;
+	display: inline-block;
+	background: url("imgs/section7.png");
+	background-size: cover;
+	float: right;
+}
+
+
+/*section eight*/
+.section8 {
+	width: 100%;
+	height: 750px;
+}
+.section8-top {
+	height: 300px;
+}
+.section8-top p:first-child{
+	position: relative;
+	top: 120px;
+	font: 21px/1.446em "Microsoft YaHei";
+  	color: rgb(50, 51, 51);
+  	text-align: center;
+ }
+ .section8-top div{
+	position: relative; 
+	top: 130px;
+	margin: 0 auto;
+	width: 30px;
+	height: 2px;
+	background-color: #E74F4D;
+	border: 0;
+}
+.section8-top p:nth-child(3) {
+	position: relative;
+	top: 165px;
+	text-align: center;
+	font: 14px/1.5em "Microsoft YaHei";
+  	color: rgb(170, 170, 170);
+}
+.section8-left {
+	position: relative;
+	left: 140px;
+	width: 300px;
+	font: 14px/1.929em "Microsoft YaHei";
+	color: rgba(0,0,0,.8);
+	display: inline-block;
+}
+.section8-left div {
+	margin-bottom: 35px;
+}
+.section8-left .more {
+	float: right;
+	margin-top: 0;
+}
+.section8-left .more:hover {
+	cursor: pointer;
+}
+.section8-left div p {
+	font: 12px/1.75em "Microsoft YaHei";
+  	color: #aaa;
+  	margin-top: 25px;
+  	display: inline-block;
+}
+.section8-right {
+	width: 640px;
+	margin-right: 140px;
+  	float: right; 
+}
+.section8-right input {
+	width: 310px;
+	height: 40px;
+	background-color: #EDEDEF;
+	border:0;
+	float: left;
+	margin-bottom: 15px;
+	padding: 10px;
+	box-sizing: border-box;
+	font: 12px/2.25em "Simsun";
+ 	color: rgba(35, 24, 21, 0.8);
+
+}
+.section8-right input:nth-child(2n+1) {
+	margin-right: 20px;
+}
+.section8-right input:focus {
+	background-color: #fff;
+	border: 1px solid #E3E3E3;
+	outline: none
+}
+.section8-right input[type="textarea"] {
+	background-color: #EDEDEF; 
+	width: 100%;
+	height: 160px;
+	padding: 15px;
+	margin-right: 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+}
+.section8-right input[type="submit"] {
+	width: 100%;
+	cursor: pointer;
+	transition: border .2s;
+	margin-bottom: 0;
+	font: 14px/1.1929em "SimHei";
+ 	color: rgb(50, 51, 51);             
+}
+.section8-right input[type="submit"]:hover {
+	border: 2px lightgray solid;
+	border-radius: 10px;
+}
+
+
+/*footer  section*/
+footer {
+	width: 100%;
+	overflow: hidden;
+}
+.footer-top {
+	width: 100%;
+	height: 320px;
+	background-color: #33363F;
+	padding-top: 90px;
+}
+.footer-top p:first-child {
+	font: 21px/2.303em "Microsoft YaHei";
+	color: #fff;
+	text-align: center;
+}
+.footer-top p:nth-child(2) {
+	font: 12px/1.5 "Simsun";
+  	color: #fff;
+  	text-align: center;
+}
+.footer-top div:nth-last-child(2) {
+	position: relative;
+	width: 525px;
+	height: 40px;
+	margin: 30px auto;
+}
+.footer-top input[type="email"] {
+	position: absolute;
+	top: 0;
+	height: 40px;
+	width: 435px;
+	border:0;
+	padding-left: 10px;
+	background-color: #fff;
+	transition: border .5s;
+	box-sizing: border-box;
+}
+.footer-top input[type="email"]:focus {
+	border: 1px lightgray solid;
+}
+.footer-top input[type="submit"] {
+	position: absolute;
+	top: 0;
+	left: 435px;
+	height: 40px;
+	width: 80px;
+	border: 0;
+	cursor: pointer;
+	font: 20px "Microsoft YaHei";
+	color: #fff;
+	background-color: #6F7278;
+	letter-spacing: 5px;
+}
+
+.footer-top input[type="submit"]:hover {
+	outline: none;
+	background-color: #8f8790;
+}
+.footer-top div:last-child {
+	position: relative;
+	top: 20px;
+	width: 250px;
+	margin : 0 auto;
+}
+.footer-top div:last-child img+img {
+	margin-left: 25px;
+}
+.footer-top div:last-child img {
+	 transition: all 0.6s;
+}
+.footer-top div:last-child img:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.footer-bottom {
+	position: relative;
+	width: 100%;
+	height: 80px;
+	background-color: #2F2F38;
+}
+.footer-bottom span {
+	position: relative;
+	left: 100px;
+	font: 10px/100px "Simsun";
+	color: #fff;
+}
+.footer-bottom a {
+	position: absolute;
+	right: 100px;
+	text-decoration: none;
+	font: 12px/100px "Simsun";
+	color: #fff;
+}
