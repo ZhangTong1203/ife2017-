@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task2_06</title>
+	<style>
+		input+input{ margin-left: 10px; }
+		#collect div {
+                display: inline-block;
+                background-color: #f00;
+                color: #fff;
+                font: 25px "Microsoft YaHei";
+                margin-right: 10px;
+            }
+	</style>
+</head>
+<body>
+	<textarea id="number" cols='25' rows='5' autofocus></textarea>
+	<input type="button" value="左侧入" onclick="process('unshift');">
+	<input type="button" value="右侧入" onclick="process('push');">
+	<input type="button" value="左侧出" onclick="process('shift');">
+	<input type="button" value="右侧出" onclick="process('pop');"><br/>
+	<input type="text" id="query"/>
+	<input type="button" id="queryButton" value="查询" onclick="search();" />
+	<div id="collect"></div>
+	<script type="text/javascript" src="task2_06.js"></script>
+</body>
+</html>
