@@ -1,0 +1,62 @@
+body {
+	font: 22px "Microsoft Yahei";
+}
+div {
+	position: relative;
+	width: 850px;
+	margin: 50px auto;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	vertical-align: middle;
+}
+.mustin {
+	width: 700px;
+	height: 50px;
+	margin-left: 50px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font: 22px "Microsoft Yahei";
+}
+input:focus {
+	outline: none;
+	 border-radius: 5px;
+    box-shadow: 0 0 2px 1px #2E78B9;
+}
+input {
+	position: absolute; 
+	right: 0;
+}
+input[type="button"] {
+	width: 120px;
+	height: 40px;
+	font: 18px "Microsoft YaHei";
+	color: #fff;
+	background-color: #2E78B9;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.caution {
+	display: none;
+	font: 18px "Microsoft YaHei";
+	color: #ccc;
+	margin-left: 150px;
+	margin-top: 30px;
+}
+.correct {
+	font: 18px "Microsoft YaHei";
+	color: #82C970;
+	margin-left: 150px;
+	margin-top: 30px;
+}
+.warn {
+	font: 18px "Microsoft YaHei";
+	color: #DD0007;
+	margin-left: 150px;
+	margin-top: 30px;
+}
