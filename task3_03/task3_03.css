@@ -1,0 +1,29 @@
+body, input, div {
+	font: 16px "Microsoft Yahei";
+}
+div {
+	width: 600px;
+	margin: 50px auto;
+}
+/*先隐藏学校及公司的选项*/
+.hide {
+	display: none;
+}
+input[type="radio"] {
+	width: 15px;
+	height: 15px;
+	margin-left: 100px;
+}
+input:focus {
+	outline: none;
+}
+select {
+	height: 30px;
+	margin-left: 80px;
+	padding-right: 70px;
+}
+input[type="text"] {
+	width: 80%;
+	height: 30px;
+	/*margin-left: 100px;*/
+}

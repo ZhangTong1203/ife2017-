@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task3_03</title>
+	<link rel="stylesheet" type="text/css" href="task3_03.css">
+</head>
+<body>
+	<div onclick="change()">
+		<input type="radio" name="occupation" value="student" checked>&nbsp;在校学生
+		<input type="radio" name="occupation" value="soloist">&nbsp;非在校生
+	</div>
+	<div>
+		学校
+		<select name="city" onchange="changeSchool()">
+			<option value="beijing">北京</option>
+			<option value="xian">西安</option>
+			<option value="shanghai">上海</option>
+		</select>
+		<select name="school">
+			<option value="bj">北京大学</option>
+			<option value="qh">清华大学</option>
+			<option value="rd">中国人民大学</option>
+		</select>
+	</div>
+	<div class="hide">
+		就业单位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="company">
+	</div>
+<script type="text/javascript" src="task3_03.js"></script>
+</body>
+</html>
