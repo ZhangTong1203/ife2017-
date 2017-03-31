@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#table {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-collapse: collapse;
+}
+td {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ccc;
+	line-height: 50px;
+	text-align: center;
+}
+tr:first-child td{
+	border: none;
+	border-bottom: 1px solid #000;
+}
+tr:last-child td{
+	border-bottom: 1px solid #000;
+}
+td:first-child{
+	border: none;
+	border-right: 1px solid #000;
+}
+td:last-child {
+	border-right: 1px solid #000;
+}
+tr:first-child td:first-child, tr:last-child td:first-child{
+	border-bottom: 0;
+}
+
+/*小方块*/
+.container {
+	position: relative;
+	height: 600px;
+}
+.space {
+	position: absolute;
+ 	top: 306px;
+	left: 306px; 
+	background: #f00;
+	width: 50px;
+	height: 50px;
+	transition: all .5s;
+}
+.space-blue {
+	position: absolute;
+ 	top: 0;
+	left: 0; 
+	background: #00f;
+	width: 50px;
+	height: 15px;
+}
+
+input {
+	margin-left: 50px;
+}
+input[type="button"] {
+	width: 100px;
+	height: 30px;
+	background-color: #0ff;
+	border: 0;
+	cursor: pointer;
+}
