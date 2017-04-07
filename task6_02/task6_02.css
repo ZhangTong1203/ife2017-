@@ -1,0 +1,64 @@
+input {
+	appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-webkit-appearance: none;
+}
+label {
+	position: relative;
+}
+.div1 label {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #ccc;
+}
+.radio1 label {
+	border-radius: 6px;
+}
+.div1 input:checked + label {
+	border-color: #f00;
+}
+.radio1 input[type='radio']:checked + label::after {
+	content: '';
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: #f00;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+}
+.checkbox1 input[type='checkbox']:checked + label::after {
+	content: '';
+	display: inline-block;
+	border-width: 0 3px 2px 0;
+	border-color: #f00;
+	border-style: solid;
+	height: 11px;
+	width: 5px;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -5px;
+	left: 3px;
+}
+/*雪碧图的实现*/
+.div2 label {
+	display: inline-block;
+	background: url(select.png);
+	width: 16px;
+	height: 16px;
+}
+.radio2 label {
+	background-position: -24px -10px;
+}
+.checkbox2 label {
+	background-position: -24px -32px;
+}
+.radio2 input[type='radio']:checked + label {
+	background-position: -59px -10px;
+}
+.checkbox2 input[type='checkbox']:checked + label{
+	background-position: -59px -32px;
+}
