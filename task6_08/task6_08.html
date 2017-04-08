@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task6_08</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.block {
+			margin: 0 auto;
+			width: 400px;
+			padding: 30px;
+			border: 1px solid #ccc;
+			background-color: #eee;
+			border-radius: 10px;
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		/*js手动实现*/
+		li {
+			list-style: none;
+		}
+		.menu {
+			position: absolute;
+			width: 110px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			background-color: #eee;
+			border-radius: 10px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="block" oncontextmenu="myMenu()" contextmenu="myMenu">
+		<p>看一看右键会有啥啦！（只可惜只能在Firefox看啦！）</p>
+		<menu type="context" id="myMenu">
+			<menuitem label='Menu item 1'></menuitem>
+			<menuitem label='Menu item 2'></menuitem>
+		</menu>
+	</div>
+	<br/><br/><br/>
+	<div class="block">
+		<p>看一看右键会有啥啦！（这个在所有浏览器都能用啦！）</p>
+	</div>
+	<div class="menu">
+		<ul>
+			<li>
+				Menu item 1
+				<ul>
+					<li>Menu item 1a</li>
+					<li>Menu item 1b</li>
+				</ul>
+			</li>
+			<li>Menu item 1</li>
+		</ul>
+	</div>
+<script type="text/javascript" src="task6_08.js"></script>
+</body>
+</html>
