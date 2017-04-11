@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task6_02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Observer(data) {
+			this.data = data;
+			this.walk(data);
+		}
+		Observer.prototype = {
+			walk : function(obj){
+				var val;
+				for(var key in obj) {
+					if(obj.hasOwnProperty(key)){
+						val = obj[key];
+						if(typeof val === 'object') {
+							new Observer(val);
+						}
+					}
+					this.fun(key, val);
+				}
+			},
+			fun : function(key, val) {
+				Object.defineProperty(this.data, key, {
+					enumerable : true,
+					configurable : true,
+					set : function(newVal) {
+						if(newVal == val) return;
+						val = newVal;
+						console.log('你设置了' + key + '，新的值为：' + newVal);						
+					},
+					get : function() {
+						console.log('你访问了' + key);
+						return val;
+					}
+				});
+			}
+		};
+		var data = {
+			name : 'ZhangTong',
+			age : 21,
+			hobby : {
+				run : 'run',
+				walk : 'walk'
+			}
+		};
+		var a = new Observer(data);
+	</script>
+</body>
+</html>
