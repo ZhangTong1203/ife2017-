@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>task6_03</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Observer(data) {
+			this.data = data;
+			this.walk(data);
+			this.event = new Event();
+		}
+		Observer.prototype = {
+			walk : function(obj){
+				var val;
+				for(var key in obj) {
+					if(obj.hasOwnProperty(key)){
+						val = obj[key];
+						if(typeof val === 'object') {
+							new Observer(val);
+						}
+					}
+					this.fun(key, val);
+				}
+			},
+			fun : function(key, val) {
+				var self = this;
+				Object.defineProperty(this.data, key, {
+					enumerable : true,
+					configurable : true,
+					set : function(newVal) {
+						if(newVal == val) return;
+						self.event.emit(key,val,newVal);
+						val = newVal;
+						if(typeof val === 'object') {
+							new Observer(val);
+						}
+						console.log('你设置了' + key + '，新的值为：' + newVal);	
+					},
+					get : function() {
+						console.log('你访问了' + key);
+						return val;
+					}
+				});
+			},
+			$watch : function (obj, callback) {
+				this.event.on(obj, callback);
+			}
+		};
+		function Event(){
+			this.events = {};
+		}
+		Event.prototype = {
+			on : function (obj, callback) {
+				if(this.events[obj]) {
+					this.events[obj].push(callback);
+				}else {
+					this.events[obj] = [callback];
+				}
+			},
+			emit : function (obj,  ...arg) {
+				this.events[obj] && this.events[obj].forEach(function(item){
+					item( ...arg);
+				});
+			},
+			delete : function (obj) {
+				if(this.events[obj]) {
+					delete this.events[obj];
+				}
+			}
+		};
+		var data = {
+         	name: {
+        		lastName: 'liang',
+        	 	firstName: 'shaofeng'
+ 			},
+        	age: 25
+		};
+		var a = new Observer(data);
+		a.$watch('age',function(val, newVal){
+			console.log(`我的名字真的变了！现在是${val}岁！`);
+		})
+		a.$watch('age',function(val, newVal){
+			console.log(`我的名字真的变了，比原来大了${newVal - val}岁`);
+		})
+	</script>
+</body>
+</html>
