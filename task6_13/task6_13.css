@@ -1,0 +1,49 @@
+.stage {
+	position: relative;
+	margin: 50px 400px;
+	perspective: 20900px;
+	transform-style: preserve-3d;
+	animation: rotate 8s infinite ;
+	height: 80vh;
+}
+img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 200px;
+	height: 150px;
+	border: 1px solid #eee;
+}
+
+img:nth-child(1) { transform: rotateY( 0deg ) translateZ(300px);  }
+img:nth-child(2) { transform: rotateY(  60deg )  translateZ(300px);  }
+img:nth-child(3) { transform: rotateY(  120deg )  translateZ(300px); }
+img:nth-child(4) { transform: rotateY( 180deg )  translateZ(300px); }
+img:nth-child(5) { transform: rotateY( 240deg )  translateZ(300px);  }
+img:nth-child(6) { transform: rotateY( 300deg )  translateZ(300px);  }
+@keyframes rotate {
+	form {
+		transform: rotateY(0deg);
+	}
+	16.667% {
+		transform: rotateY(60deg);
+	}
+	33.334% {
+		transform: rotateY(120deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	66.68% {
+	 	transform: rotateY(240deg);
+	 } 
+	83.5% {
+	  	transform: rotateY(300deg);
+	  }
+	to {
+		transform: rotateY(360deg);
+	}
+}
